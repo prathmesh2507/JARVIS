@@ -52,6 +52,7 @@ $('#MicBtn').click(function(e) {
     eel.playAssistantSound() 
     $('#oval').attr('hidden', true);
     $('#siriwave').attr('hidden', false);
+    eel.takeCommand()
 
 })
 
