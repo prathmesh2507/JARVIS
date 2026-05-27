@@ -13,7 +13,7 @@ def speak(text):
     eel.DisplayMessage(text)
     engine.say(text)
     engine.runAndWait()
-    
+
 
 
 def takeCommand():
@@ -34,7 +34,7 @@ def takeCommand():
         print(f"User said: {query}")
         eel.DisplayMessage(query)
         time.sleep(2)
-        
+
 
     except Exception as e:
         print("Say that again please...")
@@ -52,6 +52,11 @@ def allCommands():
     if 'open' in query:
         from engine.features import opencommand
         opencommand(query)
+    
+    elif "on youtube" in query:
+        from engine.features import PlayYoutube
+        PlayYoutube(query)
+    
     else:
         print("No command found...")
         
