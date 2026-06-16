@@ -56,6 +56,15 @@ $('#MicBtn').click(function(e) {
 
 })
 
+function doc_keyup(e) {
+    if (e.key === 'j' && e.metaKey) {
+        eel.playAssistantSound
+        $('#oval').attr('hidden', true);
+        $('#siriwave').attr('hidden', false);
+        eel.allCommands()
+    }
+}
+    document.addEventListener('keyup', doc_keyup, false);
 
 
 });
